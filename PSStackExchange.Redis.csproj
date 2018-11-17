@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>PSStackExchange.Redis</AssemblyName>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="PowerShellStandard.Library" Version="5.1.0-preview-06">
+      <PrivateAssets>All</PrivateAssets>
+    </PackageReference>
+    <!--
+    need to use this specific package as I am getting the error described here
+    https://github.com/Azure/aspnet-redis-providers/issues/69
+    -->
+    <PackageReference Include="StackExchange.Redis.StrongName" Version="1.2.1" />
+    <!-- 
+    <PackageReference Include="StackExchange.Redis" Version="1.2.6" />
+    <PackageReference Include="System.Reflection.TypeExtensions" Version="4.1.0" />
+    -->    
+  </ItemGroup>
+
+</Project>
